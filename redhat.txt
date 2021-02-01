@@ -1,0 +1,3 @@
+nvidia/gpu-operator-bundle@sha256:0e69c29d33d5ab9d6676c6a6d5b89e57caddf44090bbabc74a12fea3005704bd
+nvidia/gpu-operator-bundle@sha256:3a70920f1aca227ebe5b1db44125c4370bad00379a941f0bac301d61ee112ba2
+nvidia/gpu-operator-bundle@sha256:243b8f0bbc2bda6bb13395f165fe5ec01999331e9b61878686d2073df3bf906c

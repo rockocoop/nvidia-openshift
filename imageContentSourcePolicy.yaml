@@ -1,0 +1,33 @@
+apiVersion: operator.openshift.io/v1alpha1
+kind: ImageContentSourcePolicy
+metadata:
+  name: nvidia-driver
+spec:
+  repositoryDigestMirrors:
+  - mirrors:
+    - smalldogg.playground.net:5000/nvidia/k8s-dcgm-exporter
+    source: nvcr.io/nvidia/k8s/dcgm-exporter
+  - mirrors:
+    - smalldogg.playground.net:5000/nvidia/k8s-container-toolkit
+    source: nvcr.io/nvidia/k8s/container-toolkit
+  - mirrors:
+    - smalldogg.playground.net:5000/nvidia/cuda
+    source: nvcr.io/nvidia/cuda
+  - mirrors:
+    - smalldogg.playground.net:5000/nvidia/driver
+    source: nvcr.io/nvidia/driver
+  - mirrors:
+    - smalldogg.playground.net:5000/nvidia/gpu-operator-bundle
+    source: registry.connect.redhat.com/nvidia/gpu-operator-bundle
+  - mirrors:
+    - smalldogg.playground.net:5000/nvidia/gpu-operator
+    source: nvcr.io/nvidia/gpu-operator
+  - mirrors:
+    - smalldogg.playground.net:5000/nvidia/k8s-cuda-sample
+    source: nvcr.io/nvidia/k8s/cuda-sample
+  - mirrors:
+    - smalldogg.playground.net:5000/nvidia/k8s-device-plugin
+    source: nvcr.io/nvidia/k8s-device-plugin
+  - mirrors:
+    - smalldogg.playground.net:5000/nvidia/gpu-feature-discovery
+    source: nvcr.io/nvidia/gpu-feature-discovery
