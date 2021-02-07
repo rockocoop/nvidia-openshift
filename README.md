@@ -1,7 +1,7 @@
 # nvidia-openshift
 
 
-``Procedure for running Nvidia GPU Operator 1.3.1 in a disconnected environment``
+##Procedure for running Nvidia GPU Operator 1.3.1 in a disconnected environment##
 
 1. Setup a RHEL 8.2 machine to work on
 
@@ -21,6 +21,26 @@
 5. Deploy index image as a new catalogsource under the openshift-marketplace project
 
 
+## Test GPU Setup ##
+You can use caffe2ai to test the install as follows:
+
+1) Deploy in a new namespace the caffe2 yaml in this repo
+
+2 )Expose the service 
+
+3) Connect to Route
+
+4) Check Pod log for token
+
+
+5) Login and go to the following path:
+
+```
+http://<route on openshift router>/notebooks/caffe2/caffe2/python/tutorials/Multi-GPU_Training.ipynb
+```
+
+Scroll down and run the solution.  Once you have run them all you can connect into the driver pod and run nvidia-smi to see that
+the GPU is working
 
  
 
