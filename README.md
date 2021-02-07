@@ -24,14 +24,20 @@
 ## Test GPU Setup ##
 You can use caffe2ai to test the install as follows:
 
+Prerequisites:
+- this repo
+- download dataset https://download.caffe2.ai/databases/resnet_trainer.zip
+- download the image docker.io/caffe2ai/caffe2 and make it available in your local registry
+
+Run Test:
+
 1) Deploy in a new namespace the caffe2 yaml in this repo
 
-2 )Expose the service 
+2) Expose the service 
 
 3) Connect to Route
 
 4) Check Pod log for token
-
 
 5) Login and go to the following path:
 
@@ -39,7 +45,13 @@ You can use caffe2ai to test the install as follows:
 http://<route on openshift router>/notebooks/caffe2/caffe2/python/tutorials/Multi-GPU_Training.ipynb
 ```
 
-Scroll down and run the solution.  Once you have run them all you can connect into the driver pod and run nvidia-smi to see that
+6) Scroll down to the solution  
+
+7) Update the value in the first section from https://download.caffe2.ai/databases/resnet_trainer.zip to the location
+   you have placed this data in your local disconnected network
+
+
+Once you have run them all you can connect into the driver pod and run nvidia-smi to see that
 the GPU is working
 
  
